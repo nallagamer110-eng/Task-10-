@@ -1,41 +1,16 @@
-# Laundry Services - Responsive & Interactive Landing Page
+# Laundry Services - Hero Image Animation
 
-A complete, modern, and highly interactive landing page for a laundry application. This project demonstrates advanced CSS techniques, including responsive design without frameworks, CSS-only state management, and custom keyframe animations.
+For this task, I updated the hero section of the Laundry app landing page to include a custom, attention-grabbing animation on the main image.
 
-## 📝 Project Overview
+## My Learning Process
 
-This project was built progressively through multiple phases to transform a static desktop layout into a fully responsive, engaging user experience. The core focus was to utilize pure CSS to handle layouts, mobile navigation logic, and animations without relying on JavaScript or external libraries like Bootstrap.
+My first attempt at this animation had some issues, and I had to rework it to get the effects right. Here is what I learned:
 
-## ✨ Key Features Implemented
+1. **Creating a True Orbit:** Initially, I tried to make the image move in a circle by just using `translate(x, y)` at different percentages. That didn't work well—it moved in more of a diamond shape. I learned that to make a true circular orbit in CSS, you have to rotate the element, push it outward with `translateX`, and then apply a negative rotation so the image itself doesn't turn upside down. 
+2. **The Squeeze Effect:** My first scale effect was too subtle (I used `scale(0.95, 1.05)`). To make it genuinely grab attention like the prompt asked, I adjusted the keyframes to stretch and squash much more dramatically using `scale(0.7, 1.3)` and `scale(1.3, 0.7)`. 
 
-### 1. Fully Responsive Layout (Flexbox & Media Queries)
-- Utilized `display: flex` and `flex-direction` to seamlessly rearrange the Hero section and Navbar across Desktop, Tablet (`<= 1024px`), and Mobile (`<= 768px`) breakpoints.
-- Dynamically scales typography and image sizes to maintain visual balance on smaller screens.
+## How to Run
 
-### 2. CSS-Only Mobile Hamburger Menu
-- Implemented a functional sliding mobile drawer menu strictly using HTML and CSS.
-- Uses the `:focus` pseudo-class on a hidden button and the general sibling combinator (`~`) to trigger the menu's visibility on tap/click. 
-
-### 3. Interactive CTA Button (Micro-interactions)
-- Added smooth transition effects to the "Book a service today!" button.
-- On hover, the button scales up (`scale(1.05)`) and tilts slightly (`rotate(-3deg)`) to encourage user interaction.
-
-### 4. Dynamic Hero Image Animation
-- Brought the 3D washing machine illustration to life using a custom CSS `@keyframes` animation (`orbitSqueeze`).
-- The image continuously floats in a smooth orbit path (`translate`) while gently stretching and compressing (`scale`) to create a playful, bouncy effect.
-
-## 🛠️ Technologies Used
-
-- **HTML5:** Semantic structuring and sibling grouping for CSS-only logic.
-- **CSS3:** - Advanced Flexbox mechanics
-  - Media Queries for responsive design
-  - Advanced selectors (`~`) and pseudo-classes (`:focus`, `:hover`)
-  - CSS Transitions and `@keyframes` Animations
-
-## 📂 File Structure
-
-```text
-📁 laundry-services-app
- ├── 📄 index.html          # Main HTML structure
- ├── 📄 style.css           # Contains all layout, responsive, and animation rule
- └── 📄 README.md           # Project documentation
+1. Make sure you have `index.html`, `style.css`, and the hero image saved in the same folder on your computer.
+2. Double-click the `index.html` file to open it in your web browser.
+3. Look at the washing machine image on the right side of the screen. It should automatically be moving in a smooth circular orbit while stretching and squashing.
